@@ -594,6 +594,7 @@ a {
 }
 
 .footer-text {
+  display: block;
   margin-bottom: 20px;
 
   color: var(--primary-white-color);
