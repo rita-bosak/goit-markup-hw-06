@@ -385,7 +385,7 @@
    
     <footer class="footer">
         <div class="container">
-            <div>
+            <div class="footer-wrapper">
                 <a href="./" lang="en" class="logo white link"><span class="logo-web">Web</span>Studio</a>
                
                 <div class="footer-address-container">
@@ -404,7 +404,7 @@
             </div>
 
             <div class="footer-social-container">
-                <p class="footer-social-text">Присоединяйтесь</p>
+                <p class="footer-text">Присоединяйтесь</p>
 
                 <ul class="social-list list">
                     <li class="social-list-item">
@@ -440,6 +440,21 @@
                     </li>
                 </ul>
             </div>
+            <div class="footer-form-wrapper">
+                <form action="#" class="footer-form">
+                    <label class="footer-form-label">
+                        <span class="footer-text">Подпишитесь на рассылку</span>
+                        <input type="email" name="user-subscribe-mail" placeholder="E-mail" class="footer-form-box">
+                    </label>
+                    <button type="submit" class="footer-form-btn">
+                        Подписаться
+                        <svg class="footer-form-btn-icon">
+                            <use href="./images/sprite.svg#send"></use>
+                        </svg>
+
+                    </button>
+                </form>
+            </div>
 
         </div>
     </footer>
@@ -453,9 +468,9 @@
 
             <b class="modal-text">Оставьте свои данные, мы вам перезвоним</b>
            
-            <form action="#"class="form" autocomplete="off">
+            <form action="#" class="form" autocomplete="off">
                 <label class="form-label">
-                    <p class="label-text">Имя</p>
+                    <span class="form-label-text">Имя</span>
                     <span class="form-input-wrapper">
                         <input type="text" name="user-name" class="form-box">
                         <svg class="form-box-icon">
@@ -465,7 +480,7 @@
                 </label>
 
                 <label class="form-label">
-                    <p class="label-text">Телефон</p>
+                    <span class="form-label-text">Телефон</span>
                     <span class="form-input-wrapper">
                         <input type="tel" name="user-phone" class="form-box">
                         <svg class="form-box-icon">
@@ -476,7 +491,7 @@
                 
 
                 <label class="form-label">
-                    <p class="label-text">Почта</p>
+                    <span class="form-label-text">Почта</span>
                     <span class="form-input-wrapper">
                         <input type="email" name="user-mail" class="form-box">
                         <svg class="form-box-icon">
@@ -485,14 +500,14 @@
                     </span>                    
                 </label>
 
-                <label class="form-label">
-                    <p class="label-text">Комментарий</p>
-                    <textarea name="user-message" id="" placeholder="Введите текст" class="form-message"></textarea>
+                <label class="form-label-message">
+                    <span class="form-label-text">Комментарий</span>
+                    <textarea name="user-message" placeholder="Введите текст" class="form-message"></textarea>
                 </label>
 
-                <label class="checkbox-label">
+                <input type="checkbox" class="checkbox visually-hidden" id="checkbox">
+                <label class="checkbox-label" for="checkbox">
                     Соглашаюсь с рассылкой и принимаю <a href="#" class="checkbox-link">Условия договора</a>
-                    <input type="checkbox" class="checkbox">
                 </label>
                 <button type="submit" class="user-form-btn">Отправить</button>
             </form>

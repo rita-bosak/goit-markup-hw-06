@@ -166,6 +166,8 @@ a {
 }
 
 .header-contact-list-item .link {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -527,7 +529,7 @@ a {
   fill: var(--accent-color);
 }
 
-/* ---------FOOTER---------- */
+/* ---------------------FOOTER---------------------- */
 
 .footer {
   padding-top: 60px;
@@ -543,6 +545,10 @@ a {
   align-items: baseline;
 }
 
+.footer-wrapper {
+  margin-right: 70px;
+}
+
 .logo.white {
   display: inline-block;
   margin-bottom: 20px;
@@ -552,7 +558,6 @@ a {
 
 .footer-address-container {
   width: 231px;
-  margin-right: 70px;
 }
 
 .address-text {
@@ -585,9 +590,10 @@ a {
 
 .footer-social-container {
   width: 206px;
+  margin-right: 92px;
 }
 
-.footer-social-text {
+.footer-text {
   margin-bottom: 20px;
 
   color: var(--primary-white-color);
@@ -612,14 +618,53 @@ a {
   background-color: var(--accent-color);
 }
 
-/* ------------------PORTFOLIO----------- */
+.footer-form-box {
+  background-color: transparent;
+  width: 355px;
+  height: 50px;
+  padding: 15px;
+  margin-right: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  color: var(--primary-white-color);
+}
+
+.footer-form-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  padding: 10px;
+
+  border: transparent;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  cursor: pointer;
+
+  color: var(--primary-white-color);
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}
+
+.footer-form-btn-icon {
+  fill: #ffffff;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+/* ---------------------PORTFOLIO-------------------- */
 
 .portfolio {
   padding-top: 100px;
   padding-bottom: 94px;
 }
 
-/* -----------FILTER-BTN------------------- */
+/* --------------------FILTER-BTN------------------- */
 
 .filter-btn-list {
   display: flex;
@@ -660,7 +705,7 @@ a {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* ----------CARD-SET-------------------- */
+/* -------------------CARD-SET-------------------- */
 
 .examples-list {
   display: flex;
@@ -779,8 +824,7 @@ a {
 
   width: 528px;
   height: 580px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px;
   background-color: #ffffff;
   transition: all var(--transition-duration) var(--transition-timing-function);
 }
@@ -822,25 +866,13 @@ a {
   text-align: center;
 }
 
-.form {
-  max-width: 448px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* ---------------USER-FORM----------------------- */
 .form-label {
   display: block;
-}
-
-.form-label:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.form-label:last-child {
-  margin-bottom: 20px;
-}
-
-.label-text {
+.form-label-text {
   display: block;
   margin-bottom: 4px;
 
@@ -868,6 +900,11 @@ a {
   border-radius: 4px;
 }
 
+.form-box:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
 .form-box-icon {
   position: absolute;
   top: 50%;
@@ -885,24 +922,61 @@ a {
   fill: var(--accent-color);
 }
 
+.form-label-message {
+  display: block;
+  margin-bottom: 20px;
+}
+
 .form-message {
   width: 100%;
   height: 120px;
   padding: 12px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  resize: none;
+}
+
+.form-message:focus {
+  outline: none;
+  border-color: var(--accent-color);
 }
 
 .checkbox-label {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   margin-bottom: 30px;
 
   color: var(--secondary-text-color);
-  text-align: center;
+}
+
+.checkbox-label::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  background-image: url(../images/checkbox_icon/vector.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkbox:checked + .checkbox-label::before {
+  background-image: url(../images/checkbox_icon/icon_check.svg);
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.checkbox:focus + .checkbox-label::before {
+  outline: 1px solid var(--accent-color);
 }
 
 .checkbox-link {
-  display: inline;
+  width: max-content;
+  margin-left: 3px;
   color: var(--accent-color);
 }
 
